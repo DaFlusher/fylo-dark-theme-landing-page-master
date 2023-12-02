@@ -18,15 +18,19 @@
                    
                     div.newsletter{
                         position: absolute;
-                        top: -55%;
+                        top: -45%;
                         left: 50%;
                         transform: translateX(-50%);
                         box-shadow: variables.$base-box-shadow;
-                        z-index: 1;
+                        z-index: 2;
                         text-align: center;
                         background-color: map-get(variables.$primary, bg-intro);
                         padding: variables.$base-padding*2;
                         border-radius: 0.5rem;
+
+                        @media (min-width:1000px){
+                            top: -70%;
+                        }
                         .h6-text{
                             padding: variables.$base-padding;
                             font-family: variables.$ff-rale;
@@ -86,11 +90,16 @@
                             }
                         }
 
-                        div.facebook-icon{
-                            i{
-                            background-color: green;
+                        
+                        i{ 
                             color: white;
-                        }}
+                            padding: variables.$base-padding;
+                            padding-left: 0;
+                            font-size: 1.25rem;
+                               
+                                
+                        }
+                        
                         
                     }
                 }
