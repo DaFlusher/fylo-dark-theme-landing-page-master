@@ -1,0 +1,98 @@
+@use 'sass:math';
+@use 'variables';
+
+@mixin gradient($cyan: 'cyan', $blue: 'blue'){
+    $cyancolor: map-get(variables.$accent, $cyan);
+    $bluecolor: map-get(variables.$accent, $blue);
+    background: linear-gradient(to right,$cyancolor,$bluecolor);
+    color: hsl(0, 0%, 100%);
+    transition: background 0.3s ease;
+    &:hover {
+        background: linear-gradient(to right, lighten($bluecolor, 10%), lighten($cyancolor, 10%));
+      }
+}
+
+
+@mixin btn(){
+    @include gradient('cyan','blue');
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    padding: variables.$base-padding variables.$base-padding*3;
+    border-radius: variables.$base-border-radius*1.5;
+    font-family: variables.$ff-rale;
+    font-weight: map-get(variables.$font-weights, bold);
+    
+    
+}
+
+@mixin btn-sm(){
+    @include gradient('cyan','blue');
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    padding: variables.$base-padding variables.$base-padding*1.5;
+    border-radius: variables.$base-border-radius*1.5;
+    font-family: variables.$ff-rale;
+    font-weight: map-get(variables.$font-weights, bold);
+}
+
+@mixin input(){
+    display: inline-block;
+    border: 0;
+    padding: variables.$base-padding variables.$base-padding*1.5;
+    border-radius: variables.$base-border-radius;
+    font-size: variables.$font-size-sm;
+    
+}
+//grid system mixins for media queries breakpoints
+
+@mixin xs{
+    @media (min-width: map-get(variables.$breakpoints, 'xs')){
+        @content;
+    }
+}
+
+@mixin sm{
+    @media (min-width: map-get(variables.$breakpoints, 'sm')){
+        @content;
+    }
+}
+
+@mixin md{
+    @media (min-width: map-get(variables.$breakpoints, 'md')){
+        @content;
+    }
+}
+
+@mixin lg{
+    @media (min-width: map-get(variables.$breakpoints, 'lg')){
+        @content;
+    }
+}
+
+@mixin xl{
+    @media (min-width: map-get(variables.$breakpoints, 'xl')){
+        @content;
+    }
+}
+
+@mixin xxl{
+    @media (min-width: map-get(variables.$breakpoints, 'xxl')){
+        @content;
+    }
+}
+
+//a more flexible breakpoint mixin to be used if we want to apply a particular style at a breakpoint not specified in the above mixins
+
+@mixin breakpoint($bp:0){
+    @media (min-width:$bp){
+        @content;
+    }
+}
+
+.sm{
+    @include sm;
+}

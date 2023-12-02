@@ -1,0 +1,102 @@
+@use 'sass:math';
+@use '../components/variables';
+@use '../components/mixins';
+@use '../components/grids';
+
+main.main{
+    background-color: map-get(variables.$primary, bg-intro);
+    
+    section.hero{
+        div.bg-image{
+            
+            background: url('/images/bg-curvy-mobile.svg') no-repeat center center;
+            background-size: auto 100%;
+
+             //adding a mediaquery for the background image
+
+            @media (min-width:640px) {
+                background: url('/images/bg-curvy-desktop.svg') no-repeat center center;
+                background-size: 100% 100%;
+                }
+            
+
+            div{
+                color: white;
+                text-align: center;
+                div{
+                    padding: variables.$base-padding;
+                    h1.text-header{
+                        margin-bottom: 0;
+                        font-family: variables.$ff-rale;
+                        font-weight: map-get(variables.$font-weights,bold);
+                    }
+
+                    h6.subhead{
+                        padding: variables.$base-padding*1.5 0;
+                        margin-bottom: 0;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+
+    }
+    
+    section.main{
+        padding: variables.$base-padding*5 0;
+        padding-bottom: variables.$base-padding*8 ;
+        background-color: map-get(variables.$primary, bg-main);
+        
+        color: white;
+            div{
+                div{
+                    div{
+                        text-align: center;
+                        text-wrap: balance;
+
+                        img{
+                            padding-top: variables.$base-padding*2;
+                        }
+                        .h6-text{
+                            padding-top: variables.$base-padding;
+                            font-family: variables.$ff-rale;
+                            font-weight: map-get(variables.$font-weights, bold);
+                        }
+                        p{
+                            font-size: variables.$font-size-sm;
+                            
+                        }
+
+                        
+                       
+                            
+                            
+                        a{  
+                             color: map-get(variables.$accent, 'cyan');
+                                font-size: 0.75rem;
+                                text-decoration: none;
+                                border-bottom-color:map-get(variables.$accent, 'cyan');
+                                border-bottom-style: solid;
+                                border-bottom-width: 0.1em;
+                                padding-bottom: 3px;
+                                span{
+                                    img{
+                                        padding: 0;
+                                    }
+                                }
+                            }
+                        
+                      
+                    }
+
+                    
+         
+            }
+
+
+        }}
+   
+    
+   

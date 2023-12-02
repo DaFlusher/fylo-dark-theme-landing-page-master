@@ -1,0 +1,32 @@
+@use 'sass:math';
+@use '../components/variables';
+@use '../components/mixins';
+@use '../components/grids';
+
+
+nav{
+    background-color: map-get(variables.$primary, bg-intro);
+    font-size: variables.$font-size-sm;
+    font-family: variables.$ff-rale;
+
+    div{
+        a{
+            img{
+                max-height:1.5rem;
+            }
+        }
+
+        ul.mynav{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+
+            li{
+               padding-left: variables.$base-padding;
+                a{
+                   text-decoration: none;
+                }
+            }
+        }
+    }
+}

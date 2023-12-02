@@ -1,0 +1,12 @@
+@use 'variables';
+@use 'mixins';
+
+
+// Styles in button partial
+.mybtn {
+  @include mixins.btn;
+}
+
+.news-input{
+  @include mixins.input;
+}

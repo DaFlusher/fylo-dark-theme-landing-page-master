@@ -1,0 +1,22 @@
+{
+  "name": "fylo-dark-theme-landing-page-master",
+  "version": "1.0.0",
+  "description": "Fylo landing page Dark theme frontend mentor challenge",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass":"sass --watch scss:assets/css"
+  },
+  "keywords": [
+    "sass",
+    "fylo-landing",
+    "dark-theme"
+  ],
+  "author": "Joy Ibe",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.0"
+  }
+}

@@ -1,0 +1,19 @@
+//importing the components
+@use 'components/reset';
+@use 'components/variables';
+@use 'components/mixins';
+@use 'components/buttons';
+@use 'components/grids';
+
+
+
+//importing the sections
+
+@use 'sections/nav';
+@use 'sections/hero';
+@use 'sections/main';
+@use 'sections/testimonials';
+@use 'sections/newsletter';
+@use 'sections/footer';
+
+

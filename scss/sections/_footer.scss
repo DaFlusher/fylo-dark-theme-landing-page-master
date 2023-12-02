@@ -1,0 +1,98 @@
+@use 'sass:math';
+@use '../components/variables';
+@use '../components/mixins';
+@use '../components/grids';
+
+
+ footer{
+        background-color: map-get(variables.$primary, bg-footer);
+        padding-top: variables.$base-padding*8 ;
+        
+        color: white;
+        section.info{
+            padding: variables.$base-padding*5 variables.$base-padding;
+           
+            div{
+                div{
+                    position: relative;
+                   
+                    div.newsletter{
+                        position: absolute;
+                        top: -55%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        box-shadow: variables.$base-box-shadow;
+                        z-index: 1;
+                        text-align: center;
+                        background-color: map-get(variables.$primary, bg-intro);
+                        padding: variables.$base-padding*2;
+                        border-radius: 0.5rem;
+                        .h6-text{
+                            padding: variables.$base-padding;
+                            font-family: variables.$ff-rale;
+                            font-weight: map-get(variables.$font-weights, bold);
+                        }
+                        p{
+                            font-size: variables.$font-size-sm;
+                            text-wrap: balance;
+                            text-align: center;
+                            
+                        }
+
+                        form{text-align: center;
+                            input{
+                                margin: variables.$base-margin 0.25rem;
+                            }
+                            button{
+                                margin-top: variables.$base-margin;
+                                
+                            }
+                        }
+                        
+
+                    }
+                    div.logo{
+                        padding: variables.$base-padding*2 0;
+                        padding-top: variables.$base-padding*10 ;
+                    }
+                    div{
+                        
+                        .footer-logo{
+                            max-height: 2rem;
+                            
+                        }
+                        div.icon-flex{
+                            text-align: center;
+                            display: flex;
+                            
+
+                            img{
+                                max-height: 1rem;
+                                padding-right: variables.$base-padding;
+                                margin-top: 0.375rem;
+                            }
+                           
+                        }
+
+                        ul{list-style: none;
+                            padding: 0;
+                            font-size: 0.875rem;
+                            line-height: 2rem;
+                            
+                            li{
+                                display: block;
+                                
+                            }
+                        }
+
+                        div.facebook-icon{
+                            i{
+                            background-color: green;
+                            color: white;
+                        }}
+                        
+                    }
+                }
+            }
+        }
+    }

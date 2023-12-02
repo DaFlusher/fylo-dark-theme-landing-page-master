@@ -1,0 +1,58 @@
+@use 'sass:math';
+@use '../components/variables';
+@use '../components/mixins';
+@use '../components/grids';
+
+
+main.main{
+    section.testimonials{
+        padding: variables.$base-padding*5 variables.$base-padding;
+        padding-bottom: variables.$base-padding*22 ;
+        color: white;
+        background-color: map-get(variables.$primary, bg-main);
+        position: relative;
+        div{
+            div{
+            
+                div.testimonial{
+                    background-color: map-get(variables.$primary, bg-testimonials);
+                    padding: variables.$base-padding*2 ;
+                    border-radius: 0.25rem;
+                    position: relative;
+                    z-index: 2;
+                    img.quotes{
+                        position: absolute;
+                        top: -13%;
+                        left: 0.5rem;
+                        max-width: 1.875rem;
+                        z-index: 0;
+                    }
+                    p.comments{
+                        font-size: 0.75rem;
+                    }
+
+                    div.profile{
+                        display: flex;
+                        align-items: center;
+                        img{
+                            max-height: 3.125rem;
+                            border-radius: 50%;
+                            padding-right: 0.5rem;
+                        }
+                        h6.profile-name{
+                            font-size: variables.$font-size-sm;
+                            font-weight: map-get(variables.$font-weights,bold);
+                            
+                            span{
+                                display: block;
+                                font-size: 0.625rem;
+                                font-weight: map-get(variables.$font-weights,medium);
+                                padding-top: math.div(variables.$base-padding,2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
