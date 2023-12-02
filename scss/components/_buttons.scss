@@ -10,3 +10,7 @@
 .news-input{
   @include mixins.input;
 }
+
+.mybtn-sm{
+  @include mixins.btn-sm;
+}
